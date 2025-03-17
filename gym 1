@@ -1,0 +1,40 @@
+package BMAI203;
+import java.util.Scanner;
+public class GYM_203
+{
+    String name;
+    int age;
+    boolean isActive;
+    int duration;
+    double fee;
+
+    public void calculate_fee()
+    {
+        fee = duration * 50.0;
+    }
+    public static void main(String[] args)
+    {
+        Scanner scanner=new Scanner(System.in);
+        GYM_203 m1 = new GYM_203();
+        System.out.println("welcome to gym management");
+        System.out.print("enter the name :");
+        m1.name=scanner.nextLine();
+        System.out.print("enter the age:");
+        m1.age=scanner.nextInt();
+        System.out.print("Active members? (true/false):");
+        m1.isActive=scanner.nextBoolean();
+        System.out.print("enter the duration in months:");
+        m1.duration=scanner.nextInt();
+        m1.calculate_fee();
+
+        System.out.println("member details:");
+        System.out.println("name:"+ m1.name);
+        System.out.println("age:"+ m1.age);
+        System.out.println("duration"+ m1.duration + "months");
+        System.out.println("fee:"+ m1.fee);
+
+
+
+    }
+}
+
